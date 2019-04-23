@@ -154,7 +154,7 @@ function getLogs (domain, token, take, from, cb) {
 
 function getUserId(domain, token, connection, name, cb) {
   var url = 'https://' + domain + '/api/v2/users';
-	var luceneq = 'name:"' + name + '" AND identities.connection:"'+ connection + '"';
+	var luceneq = 'email:"' + name + '" AND identities.connection:"'+ connection + '"';
 	
   Request({
 	  method: 'GET',
