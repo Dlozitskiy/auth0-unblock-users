@@ -161,7 +161,7 @@ function getUserId(domain, token, connection, name, cb) {
 	  url: url,
 	  json: true,
 	  qs: {
-	    search_engine: "v2",
+	    search_engine: "v3",
 	    q: luceneq
 	  },
 	  headers: {
