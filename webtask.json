@@ -10,7 +10,7 @@
     "auth0",
     "extension"
   ],
-  "schedule": "0 */1 * * * *",
+  "schedule": "*/5 * * * *",
   "auth0": {
     "scopes": "read:logs read:users read:user_idp_tokens update:users"
   },
