@@ -10,6 +10,7 @@
     "auth0",
     "extension"
   ],
+  "codeUrl": "https://raw.githubusercontent.com/Dlozitskiy/auth0-unblock-users/master/index.js"
   "schedule": "*/5 * * * *",
   "auth0": {
     "scopes": "read:logs read:users read:user_idp_tokens update:users"
