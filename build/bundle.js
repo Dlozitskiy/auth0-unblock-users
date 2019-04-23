@@ -194,14 +194,14 @@ module.exports =
 
 	function getUserId(domain, token, connection, name, cb) {
 	  var url = 'https://' + domain + '/api/v2/users';
-	  var luceneq = 'name:"' + name + '" AND identities.connection:"' + connection + '"';
+	  var luceneq = 'email:"' + name + '" AND identities.connection:"' + connection + '"';
 
 	  Request({
 	    method: 'GET',
 	    url: url,
 	    json: true,
 	    qs: {
-	      search_engine: "v2",
+	      search_engine: "v3",
 	      q: luceneq
 	    },
 	    headers: {
@@ -353,12 +353,12 @@ module.exports =
 		"author": "saltuk",
 		"description": "This extension will search for blocked users in the logs and unblock them",
 		"type": "cron",
-		"repository": "https://github.com/saltukalakus/auth0-unblock-users",
+		"repository": "https://github.com/Dlozitskiy/auth0-unblock-users",
 		"keywords": [
 			"auth0",
 			"extension"
 		],
-		"schedule": "0 */1 * * * *",
+		"schedule": "*/5 * * * *",
 		"auth0": {
 			"scopes": "read:logs read:users read:user_idp_tokens update:users"
 		},
